@@ -10,15 +10,29 @@ def conectar():
         database='historico'
     )
 
+def historico():
+    try:
+        conn = conectar()
+        cursor = conn.cursor()
+        sql = "SELECT * FROM historico"
+        conect = cursor.execute(sql)
+        return conect
+    except Error as e:
+        print(f"❌ Erro ao inserir: {e}")
+        return False
+    finally:
+        if conn.is_connected():
+            cursor.close()
+            conn.close()
 
-def criar_produto(nome, preco, qtd, volume, tipo_vol_id, data_fab, data_val=None):
+def criar_produto(nome, preco, qtd, volume, tipo_vol_id, data_fab, estatos, data_val=None):
     try:
         conn = conectar()
         cursor = conn.cursor()
         # Use sempre %s para o mysql-connector-python
         sql = """INSERT INTO produto
-                 (nome, preçounitario, quantidade, volume, tipo_de_volume_id, datafabricacao, datavalidade)
-                 VALUES (%s, %s, %s, %s, %s, %s, %s)"""
+                 (nome, preçounitario, quantidade, volume, tipo_de_volume_id, datafabricacao, datavalidade,estatos)
+                 VALUES (%s, %s, %s, %s, %s, %s, %s,%s)"""
 
         values = (nome, preco, qtd, volume, tipo_vol_id, data_fab, data_val)
         cursor.execute(sql, values)

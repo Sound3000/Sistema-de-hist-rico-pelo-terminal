@@ -1,0 +1,9 @@
+fazer um menu, crud mais inteligente:
+    exemplo -
+     eu quero pegar o historico de compras de apenas 1 cliente
+     eu quero pegar o historico de clientes que compraram um determinado produto
+
+criar função historico em produtos:
+RF - o sistema deve gerar um historico de compras
+RF - o sistema deve ter um crud para historico_cliente
+RF - o sistema deve ter um crud para historico_produtos_clientes
