@@ -1,3 +1,6 @@
+
+-------------- coisas que faltam fazer --------------
+
 fazer um menu, crud mais inteligente:
     exemplo -
      eu quero pegar o historico de compras de apenas 1 cliente
@@ -7,3 +10,20 @@ criar função historico em produtos:
 RF - o sistema deve gerar um historico de compras
 RF - o sistema deve ter um crud para historico_cliente
 RF - o sistema deve ter um crud para historico_produtos_clientes
+
+Sistema de compras para o terminal
+- criar logica de compra e salvar este no produto_histórico
+- encontrar uma forma de levar o Banco de Dados para o github
+
+----------------------- outros -----------------------
+- tester fazer um backend com a porta 8080
+
+-------------------- como funciona --------------------
+
+a pasta CRUD serve para fazer uma ligação do BD com o sistema
+    - Create, Read, Update, Delete
+
+a pasta Menu serve para ter um menu interativo pelo terminal com cada CRUD presente na pasta anterior
+    - produto, tipo, cliente, historico
+
+e ja o Main serve para inicializar o sistema e poder navegar livremente pelos outros menus
